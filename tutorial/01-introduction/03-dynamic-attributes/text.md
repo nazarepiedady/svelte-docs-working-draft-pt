@@ -1,32 +1,32 @@
 ---
-title: Dynamic attributes
+title: Atributos dinâmicos
 ---
 
-You can use curly braces to control element attributes, just like you use them to control text.
+Tu podes usar as chavetas para controlar os atributos do elemento, tal como os usas para controlar o texto.
 
-Our image is missing a `src` attribute — let's add one:
+Na nossa imagem está faltando um atributo `src` — vamos adicionar um:
 
 ```html
 <img src={src}>
 ```
 
-That's better. But Svelte is giving us a warning:
+Assim está melhor. Mas a Svelte está dando-nos um aviso:
 
-> A11y: &lt;img&gt; element should have an alt attribute
+> A11y: O elemento `<img>` deveria ter um atributo `alt`
 
-When building web apps, it's important to make sure that they're *accessible* to the broadest possible userbase, including people with (for example) impaired vision or motion, or people without powerful hardware or good internet connections. Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.
+Quando construimos aplicações de web, é importante certificar-nos de que somos *acessíveis* para a mais extensa base de utilizador possível, incluído pessoas com (por exemplo) deficiência visual ou motora, ou pessoas sem hardware poderoso ou boas conexões de internet. A acessibilidade (abreviada para a11y) nem sempre é fácil de conseguir, mas a Svelte ajudar-te-á avisando-te se escreveres marcação inacessível.
 
-In this case, we're missing the `alt` attribute that describes the image for people using screenreaders, or people with slow or flaky internet connections that can't download the image. Let's add one:
+Neste caso, estávamos a esquecer do atributo `alt` que descreve a imagem para as pessoas que estiverem a usar leitores de tela, ou pessoas com conexões de internet lentas ou instáveis que podem descarregar a imagem. Vamos adicionar um:
 
 ```html
 <img src={src} alt="A man dances.">
 ```
 
-We can use curly braces *inside* attributes. Try changing it to `"{name} dances."` — remember to declare a `name` variable in the `<script>` block.
+Nós podemos usar as chavetas *dentro dos* atributos. Experimente mudá-lo para `"{name} dances."` — lembre de declarar uma variável `name` no bloco `<script>`
 
-## Shorthand attributes
+## Abreviação de atributos
 
-It's not uncommon to have an attribute where the name and value are the same, like `src={src}`. Svelte gives us a convenient shorthand for these cases:
+Não é invulgar ter um atributo onde o nome e o valor são o mesmo, tal como `src={src}`. A Svelte dá-nos uma abreviação conveniente para estes casos:
 
 ```html
 <img {src} alt="A man dances.">
