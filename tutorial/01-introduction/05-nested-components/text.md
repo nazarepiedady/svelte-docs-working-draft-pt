@@ -1,14 +1,14 @@
 ---
-title: Nested components
+title: Componentes encaixados
 ---
 
-It would be impractical to put your entire app in a single component. Instead, we can import components from other files and then use them as though we were including elements.
+Seria pouco prático colocar a tua aplicação inteira em um único componente. Ao invés disto, podemos importar os componentes a partir de outros ficheiros e depois usá-los como se estivéssemos a incluir elementos.
 
-We now present you 2 files in the editor on the right (upper bar) to click on, `App.svelte` and `Nested.svelte`.
+Agora apresentamos-te 2 ficheiros no editor na direita (barra superior) para clicar sobre, `App.svelte` e `Nested.svelte`.
 
-Each `.svelte` file holds a component that is a reusable self-contained block of code that encapsulates HTML, CSS, and JavaScript that belong together.
+Cada ficheiro `.svelte` segura um componente que é um bloco de código autossuficiente reutilizável que envolve o HTML, CSS, e JavaScript estão relacionados.
 
-Let's add a `<script>` tag to `App.svelte` that imports the file (our component) `Nested.svelte` into our app...
+Vamos adicionar um marcador `<script>` ao `App.svelte` que importa o ficheiro (o nosso componente) `Nested.svelte` para a nossa aplicação...
 
 ```html
 <script>
@@ -16,13 +16,13 @@ Let's add a `<script>` tag to `App.svelte` that imports the file (our component)
 </script>
 ```
 
-...then use component `Nested` in the app markup:
+...depois usar o componente `Nested` na marcação da aplicação:
 
 ```html
 <p>This is a paragraph.</p>
 <Nested/>
 ```
 
-Notice that even though `Nested.svelte` has a `<p>` element, the styles from `App.svelte` don't leak in.
+Nota que apesar do `Nested.svelte` ter um elemento `<p>`, os estilos do `App.svelte` não vazam para dentro.
 
-Also notice that the component name `Nested` is capitalised. This convention has been adopted to allow us to differentiate between user-defined components and regular HTML tags.
+Além disto nota que o nome do componente `Nested` está com a primeira letra em maiúscula. Esta convenção tem sido adotada para permitir-nos diferenciar entre os componentes definidos pelos utilizador e os marcadores de HTML normais.
