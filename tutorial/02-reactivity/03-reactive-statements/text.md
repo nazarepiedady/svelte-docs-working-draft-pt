@@ -1,14 +1,14 @@
 ---
-title: Statements
+title: Expressões
 ---
 
-We're not limited to declaring reactive *values* — we can also run arbitrary *statements* reactively. For example, we can log the value of `count` whenever it changes:
+Não estamos limitados a declarar *valores* reativos — também podemos executar *expressões* arbitrárias de maneira reativa. Por exemplo, podemos registar na consola do valor da `count` sempre que esta mudar:
 
 ```js
 $: console.log('the count is ' + count);
 ```
 
-You can easily group statements together with a block:
+Tu podes agrupar facilmente as expressões com um bloco:
 
 ```js
 $: {
@@ -17,7 +17,7 @@ $: {
 }
 ```
 
-You can even put the `$:` in front of things like `if` blocks:
+Tu podes até mesmo colocar o `$:` em frente de coisas como blocos de `if`:
 
 ```js
 $: if (count >= 10) {
