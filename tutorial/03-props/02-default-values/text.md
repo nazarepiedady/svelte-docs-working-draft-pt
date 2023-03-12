@@ -1,8 +1,8 @@
 ---
-title: Default values
+title: Valores predefinidos
 ---
 
-We can easily specify default values for props in `Nested.svelte`:
+Nós podemos facilmente especificar valores predefinidos para as propriedades na `Nested.svelte`:
 
 ```html
 <script>
@@ -10,7 +10,7 @@ We can easily specify default values for props in `Nested.svelte`:
 </script>
 ```
 
-If we now add a second component *without* an `answer` prop, it will fall back to the default:
+Se agora adicionarmos um segundo componente *sem* uma propriedade `answer`, ele descerá para o valor predefinido:
 
 ```html
 <Nested answer={42}/>
