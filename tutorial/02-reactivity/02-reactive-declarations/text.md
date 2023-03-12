@@ -1,20 +1,20 @@
 ---
-title: Declarations
+title: Declarações
 ---
 
-Svelte's reactivity not only keeps the DOM in sync with your application's variables as shown in the previous section, it can also keep variables in sync with each other using reactive declarations. They look like this:
+A reatividade da Svelte não apenas mantém o DOM em sincronia com as variáveis da tua aplicação como mostrado na seção anterior, também pode manter as variáveis em sincronia uma com as outras usando declarações reativas. Elas parecem-se com isto:
 
 ```js
 let count = 0;
 $: doubled = count * 2;
 ```
 
-> Don't worry if this looks a little alien. It's [valid](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (if unconventional) JavaScript, which Svelte interprets to mean 're-run this code whenever any of the referenced values change'. Once you get used to it, there's no going back.
+> Não te preocupes se isto parece um pouco extraterrestre. É JavaScript [válido](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/label) (apesar de pouco convencional), o qual a Svelte interpreta para significar 'execute este código novamente sempre que qualquer um dos valores referenciados mudar'. Uma vez que estiveres habituado à isto, não têm como voltar atrás.
 
-Let's use `doubled` in our markup:
+Vamos usar `doubled` na nossa marcação:
 
 ```html
 <p>{count} doubled is {doubled}</p>
 ```
 
-Of course, you could just write `{count * 2}` in the markup instead — you don't have to use reactive values. Reactive values become particularly valuable when you need to reference them multiple times, or you have values that depend on *other* reactive values.
+É claro que, poderias apenas escrever `{count * 2}` na marcação — não tens de usar valores reativos. Os valores reativos tornam-se particularmente valiosos quando precisas de referenciá-los várias vezes, ou tiveres valores que dependem de *outros* valores reativos.
