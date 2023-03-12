@@ -1,10 +1,10 @@
 ---
-title: Declaring props
+title: Declarando propriedades
 ---
 
-So far, we've dealt exclusively with internal state — that is to say, the values are only accessible within a given component.
+Até aqui, lidávamos exclusivamente com estado interno — quer dizer, os valores apenas são acessíveis dentro de um dado componente.
 
-In any real application, you'll need to pass data from one component down to its children. To do that, we need to declare *properties*, generally shortened to 'props'. In Svelte, we do that with the `export` keyword. Edit the `Nested.svelte` component:
+Em qualquer aplicação real, precisarás de passar dados de um componente para os seus filhos. Para fazer isto, precisamos de declarar *propriedades*, geralmente abreviadas como `props`. Na Svelte, fazemos isto com a palavra-chave `export`. Edite o componente `Nested.svelte`:
 
 ```html
 <script>
@@ -12,4 +12,4 @@ In any real application, you'll need to pass data from one component down to its
 </script>
 ```
 
-> Just like `$:`, this may feel a little weird at first. That's not how `export` normally works in JavaScript modules! Just roll with it for now — it'll soon become second nature.
+> Tal como `$:`, isto pode parecer um pouco estranho a primeira. Isto não como `export` normalmente funciona nos módulos de JavaScript! apenas por agora aceite como esta — em breve tornar-se-á natural.
