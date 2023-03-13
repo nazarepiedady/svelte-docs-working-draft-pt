@@ -1,8 +1,8 @@
 ---
-title: Else-if blocks
+title: Blocos else-if
 ---
 
-Multiple conditions can be 'chained' together with `else if`:
+Várias condições podem ser 'encadeadas' juntas com `else if`:
 
 ```html
 {#if x > 10}
