@@ -1,8 +1,8 @@
 ---
-title: Else blocks
+title: Blocos else
 ---
 
-Since the two conditions — `if user.loggedIn` and `if !user.loggedIn` — are mutually exclusive, we can simplify this component slightly by using an `else` block:
+Já que as duas condições — `if user.loggedIn` e `if !user.loggedIn` — são mutuamente exclusivas, podemos simplificar este componente ligeiramente usando um bloco de `else`:
 
 ```html
 {#if user.loggedIn}
@@ -16,4 +16,4 @@ Since the two conditions — `if user.loggedIn` and `if !user.loggedIn` — are 
 {/if}
 ```
 
-> A `#` character always indicates a *block opening* tag. A `/` character always indicates a *block closing* tag. A `:` character, as in `{:else}`, indicates a *block continuation* tag. Don't worry — you've already learned almost all the syntax Svelte adds to HTML.
+> Um carácter `#` sempre indica que um marcador de *abertura de bloco*. Um carácter `/` sempre indica um marcador de *fechamento de bloco*. Um carácter `:`, assim como em `{:else}` indica um marcador de *continuação de bloco*. Não te preocupes — já aprendeste quase toda sintaxe que a Svelte adiciona ao HTML.
