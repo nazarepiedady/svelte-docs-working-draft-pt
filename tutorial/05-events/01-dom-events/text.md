@@ -1,8 +1,8 @@
 ---
-title: DOM events
+title: Eventos do DOM
 ---
 
-As we've briefly seen already, you can listen to any event on an element with the `on:` directive:
+Conforme já brevemente vimos, podes ouvir qualquer evento em um elemento com a diretiva `on:`:
 
 ```html
 <div on:mousemove={handleMousemove}>
