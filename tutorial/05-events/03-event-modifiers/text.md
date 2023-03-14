@@ -1,8 +1,8 @@
 ---
-title: Event modifiers
+title: Modificadores de Evento
 ---
 
-DOM event handlers can have *modifiers* that alter their behaviour. For example, a handler with a `once` modifier will only run a single time:
+Os manipuladores de evento do DOM podem ter *modificadores* que alteram o seu comportamento. Por exemplo, um manipulador com um modificador `once` apenas executará uma única vez:
 
 ```html
 <script>
@@ -16,15 +16,15 @@ DOM event handlers can have *modifiers* that alter their behaviour. For example,
 </button>
 ```
 
-The full list of modifiers:
+A lista completa dos modificadores:
 
-* `preventDefault` — calls `event.preventDefault()` before running the handler. Useful for client-side form handling, for example.
-* `stopPropagation` — calls `event.stopPropagation()`, preventing the event reaching the next element
-* `passive` — improves scrolling performance on touch/wheel events (Svelte will add it automatically where it's safe to do so)
-* `nonpassive` — explicitly set `passive: false`
-* `capture` — fires the handler during the *capture* phase instead of the *bubbling* phase ([MDN docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture))
-* `once` — remove the handler after the first time it runs
-* `self` — only trigger handler if event.target is the element itself
-* `trusted` — only trigger handler if `event.isTrusted` is `true`. I.e. if the event is triggered by a user action.
+* `preventDefault` — chama `event.preventDefault()` antes da execução do manipulador. Útil para manipulação de formulário no lado do cliente, por exemplo.
+* `stopPropagation` — chama `event.stopPropagation()`, impedindo o evento de chegar ao próximo elemento.
+* `passive` — melhora o desempenho do deslocamento nos eventos tocar/empurrar (ou *touch/wheel* em Inglês) (a Svelte irá adicioná-lo onde for seguro)
+* `nopassive` — define explicitamente `passive: false`.
+* `capture` — dispara o manipulador durante a fase de *captura* ao invés da fase *transbordamento* ([documentação da MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)).
+* `once` — remove o manipulador depois da primeira vez que for executado.
+* `self` — apenas aciona o manipulador se a `event.target` for o próprio elemento.
+* `trusted` — apenas aciona o manipulador se a `event.isTrusted` for `true`. Por exemplo, se o evento for acionado por uma ação do utilizador.
 
-You can chain modifiers together, e.g. `on:click|once|capture={...}`.
+Tu podes encadear modificadores, por exemplo `on:click|once|capture={...}`.
