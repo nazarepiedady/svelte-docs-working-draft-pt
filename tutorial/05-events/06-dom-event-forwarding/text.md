@@ -1,10 +1,10 @@
 ---
-title: DOM event forwarding
+title: Expedição de Evento do DOM
 ---
 
-Event forwarding works for DOM events too.
+A expedição de evento funciona também para os eventos do DOM.
 
-We want to get notified of clicks on our `<CustomButton>` — to do that, we just need to forward `click` events on the `<button>` element in `CustomButton.svelte`:
+Nós queremos ser notificados a respeito de cada clique que for realizado sobre o nosso `<CustomButton>` — para fazer isto, apenas precisamos de expedir os eventos de `click` sobre o elemento `<button>` no `CustomButton.svelte`:
 
 ```html
 <button on:click>
