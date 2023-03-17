@@ -1,16 +1,16 @@
 ---
-title: Group inputs
+title: Entradas de Grupo
 ---
 
-If you have multiple inputs relating to the same value, you can use `bind:group` along with the `value` attribute. Radio inputs in the same group are mutually exclusive; checkbox inputs in the same group form an array of selected values.
+Se tiveres várias entradas relacionadas ao mesmo valor, podes usar a `bind:group` junto do atributo `value`. As entradas de rádio no mesmo grupo são mutuamente exclusivos; as entradas da caixa de verificação no mesmo grupo formam um arranjo de valores selecionado.
 
-Add `bind:group` to each input:
+Adicione a `bind:group` para cada entrada:
 
 ```html
 <input type=radio bind:group={scoops} name="scoops" value={1}>
 ```
 
-In this case, we could make the code simpler by moving the checkbox inputs into an `each` block. First, add a `menu` variable to the `<script>` block...
+Neste caso, poderíamos tornar o código mais simples movendo as entradas de caixa de verificação para um bloco `each`. Primeiro, adicione uma variável `menu` ao bloco `<script>`...
 
 ```js
 let menu = [
@@ -20,7 +20,7 @@ let menu = [
 ];
 ```
 
-...then replace the second section:
+...depois substitua a segunda seção:
 
 ```html
 <h2>Flavours</h2>
@@ -33,4 +33,4 @@ let menu = [
 {/each}
 ```
 
-It's now easy to expand our ice cream menu in new and exciting directions.
+Agora é fácil expandir o nosso menu de gelados em novas e entusiasmantes direções.
