@@ -1,16 +1,17 @@
 ---
-title: Textarea inputs
+title: Entradas da Área de Texto
 ---
-The `<textarea>` element behaves similarly to a text input in Svelte — use `bind:value` to create a two-way binding between the `<textarea>` content and the `value` variable:
+
+O elemento `<textarea>` comporta-se de maneira parecida com uma entrada de texto na Svelte — use a `bind:value` para criar um vínculo de dois caminhos entre o conteúdo do `<textarea>` e a variável `value`:
 
 ```html
 <textarea bind:value={value}></textarea>
 ```
 
-In cases like these, where the names match, we can also use a shorthand form:
+Em casos como estes, onde os nomes correspondem-se, também podemos usar uma forma abreviada:
 
 ```html
 <textarea bind:value></textarea>
 ```
 
-This applies to all bindings, not just textareas.
+Isto aplica-se à todos vínculos, não apenas aos da área de texto.
