@@ -1,10 +1,10 @@
 ---
-title: Select multiple
+title: Selecionar Vários
 ---
 
-A select can have a `multiple` attribute, in which case it will populate an array rather than selecting a single value.
+Um elemento de selecionar podem ter um atributo `multiple`, naqueles casos em que povoará um arranjo ao invés de selecionar um único valor.
 
-Returning to our [earlier ice cream example](/tutorial/group-inputs), we can replace the checkboxes with a `<select multiple>`:
+Retornando ao nosso [anterior exemplo de gelados](/tutorial/group-inputs), podemos substituir as caixas de verificação com um `<select multiple>`:
 
 ```html
 <h2>Flavours</h2>
@@ -18,4 +18,4 @@ Returning to our [earlier ice cream example](/tutorial/group-inputs), we can rep
 </select>
 ```
 
-> Press and hold the `control` key (or the `command` key on MacOS) for selecting multiple options.
+> Pressione e segure a tecla `control` (ou a a tecla `command` no MacOs) para selecionar várias opções.
