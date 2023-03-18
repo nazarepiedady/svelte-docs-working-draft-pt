@@ -1,8 +1,8 @@
 ---
-title: Contenteditable bindings
+title: Vínculos de Conteúdo Editável
 ---
 
-Elements with a `contenteditable="true"` attribute support `textContent` and `innerHTML` bindings:
+Os elementos com um atributo `contenteditable="true"` suportam os vínculos de `textContent` e `innerHTML`:
 
 ```html
 <div
