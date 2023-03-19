@@ -1,8 +1,8 @@
 ---
-title: Dimensions
+title: Dimensões
 ---
 
-Every block-level element has `clientWidth`, `clientHeight`, `offsetWidth` and `offsetHeight` bindings:
+Todo elemento de nível de bloco tem os vínculos `clientWidth`, `clientHeight`, `offsetWidth` e `offsetHeight`:
 
 ```html
 <div bind:clientWidth={w} bind:clientHeight={h}>
@@ -10,8 +10,8 @@ Every block-level element has `clientWidth`, `clientHeight`, `offsetWidth` and `
 </div>
 ```
 
-These bindings are readonly — changing the values of `w` and `h` won't have any effect.
+Estes vínculos são de apenas leitura — mudar os valores de `w` e `h` não terá nenhum efeito.
 
-> Elements are measured using a technique similar to [this one](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/). There is some overhead involved, so it's not recommended to use this for large numbers of elements.
+> Os elementos são medidos usando uma técnica parecida com [esta](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/). Há algumas despesas gerais envolvidas, então não é recomendado usar isto para grandes números de elementos.
 >
-> `display: inline` elements cannot be measured with this approach; nor can elements that can't contain other elements (such as `<canvas>`). In these cases you will need to measure a wrapper element instead.
+> Os elementos `display: inline` não podem ser medidos com esta abordagem; nem podem os elementos que não podem conter outros elementos (tais como `<canvas>`). Nestes casos precisarás de medir o elemento envolvedor.
