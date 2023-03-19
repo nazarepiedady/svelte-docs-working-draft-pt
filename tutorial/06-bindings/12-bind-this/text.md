@@ -2,7 +2,7 @@
 title: This
 ---
 
-The readonly `this` binding applies to every element (and component) and allows you to obtain a reference to rendered elements. For example, we can get a reference to a `<canvas>` element:
+O vínculo de apenas leitura de `this` aplica-se à todo elemento (e componente) e permite-te obter uma referência para os elementos apresentados. Por exemplo, podemos receber uma referência para um elemento `<canvas>`:
 
 ```html
 <canvas
@@ -12,4 +12,4 @@ The readonly `this` binding applies to every element (and component) and allows 
 ></canvas>
 ```
 
-Note that the value of `canvas` will be `undefined` until the component has mounted, so we put the logic inside the `onMount` [lifecycle function](/tutorial/onmount).
+Nota que o valor de `canvas` será `undefined` até o componente tiver sido montado, assim colocamos a lógica dentro da [função `onMount` do ciclo de vida](/tutorial/onmount).
