@@ -1,10 +1,10 @@
 ---
-title: Media elements
+title: Elementos de Media
 ---
 
-The `<audio>` and `<video>` elements have several properties that you can bind to. This example demonstrates a few of them.
+Os elementos `<audio>` e `<video>` têm várias propriedades que podes com as quais podes vincular. Este exemplo demonstra algumas delas. 
 
-On line 62, add `currentTime={time}`, `duration` and `paused` bindings:
+Na linha 62, adicione os vínculos `currentTime={time}`, `duration` e `paused`:
 
 ```html
 <video
@@ -21,27 +21,27 @@ On line 62, add `currentTime={time}`, `duration` and `paused` bindings:
 </video>
 ```
 
-> `bind:duration` is equivalent to `bind:duration={duration}`
+> `bind:duration` é equivalente ao `bind:duration={duration}`
 
-Now, when you click on the video, it will update `time`, `duration` and `paused` as appropriate. This means we can use them to build custom controls.
+Agora, quando clicares no vídeo, ele atualizará a `time`, `duration` e `paused` conforme o apropriado. Isto significa que podemos usá-los para construir controlos personalizados.
 
-> Ordinarily on the web, you would track `currentTime` by listening for `timeupdate` events. But these events fire too infrequently, resulting in choppy UI. Svelte does better — it checks `currentTime` using `requestAnimationFrame`.
+> Normalmente na Web, rastearias a `currentTime` ouvindo os eventos de `timeupdate`. Mas estes eventos disparam com muita pouca frequência, resultando em interface de utilizador agitada. A Svelte faz melhor — verifica a `currentTime` usando `requestAnimationFrame`.
 
-The complete set of bindings for `<audio>` and `<video>` is as follows — six *readonly* bindings...
+O conjunto completo de vínculos para `<audio>` e `<video>` é como se segue — seis vínculos de *apenas leitura*...
 
-* `duration` (readonly) — the total duration of the video, in seconds
-* `buffered` (readonly) — an array of `{start, end}` objects
-* `seekable` (readonly) — ditto
-* `played` (readonly) — ditto
-* `seeking` (readonly) — boolean
-* `ended` (readonly) — boolean
+* `duration` (apenas leitura) — a duração total do vídeo, em segundos.
+* `buffered` (apenas leitura) — um arranjo de objetos `{start, end}`.
+* `seekable` (apenas leitura) — idem (ditto).
+* `played`   (apenas leitura) — idem (ditto).
+* `seeking`  (apenas leitura) — booleano.
+* `ended`    (apenas leitura) — booleano.
 
-...and five *two-way* bindings:
+...e cinco vínculos de *dois sentidos*:
 
-* `currentTime` — the current point in the video, in seconds
-* `playbackRate` — how fast to play the video, where `1` is 'normal'
-* `paused` — this one should be self-explanatory
-* `volume` — a value between 0 and 1
-* `muted` — a boolean value where true is muted
+* `currentTime`  — o ponto atual no vídeo, em segundos.
+* `playbackRate` — quão rápido reproduzir o vídeo, onde `1` é 'normal'.
+* `paused`       — este deveria ser auto-explicativo.
+* `volume`       — um valor entre 0 e 1.
+* `muted`        — um valor booleano onde `true` é abafado.
 
-Videos additionally have readonly `videoWidth` and `videoHeight` bindings.
+Os vídeos têm adicionalmente os vínculos `videoWidth` e `videoHeight` de apenas leitura.
