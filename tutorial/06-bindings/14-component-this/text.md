@@ -1,8 +1,8 @@
 ---
-title: Binding to component instances
+title: Vincular às instâncias de componente
 ---
 
-Just as you can bind to DOM elements, you can bind to component instances themselves. For example, we can bind the instance of `<InputField>` to a variable named `field` in the same way we did when binding DOM Elements
+Exatamente como podes vincular aos elementos do DOM, podes vincular às próprias instâncias do componente. Por exemplo, podemos vincular a instância de `<InputField>` à uma variável nomeada `field` da mesma maneira que fizemos quando vinculamos elementos do DOM:
 
 ```html
 <script>
@@ -12,7 +12,7 @@ Just as you can bind to DOM elements, you can bind to component instances themse
 <InputField bind:this={field} />
 ```
 
-Now we can programmatically interact with this component using `field`.
+Agora podes interagir programaticamente com este componente usando `field`:
 
 ```html
 <button on:click="{() => field.focus()}">
@@ -20,4 +20,4 @@ Now we can programmatically interact with this component using `field`.
 </button>
 ```
 
-> Note that we can't do `{field.focus}` since field is undefined when the button is first rendered and throws an error.
+> Nota que não podemos fazer `{field.focus}` já que a `field` é `undefined` quando o botão é apresentado primeiro e lança um erro.
