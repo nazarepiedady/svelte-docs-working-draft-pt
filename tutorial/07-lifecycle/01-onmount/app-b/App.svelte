@@ -18,7 +18,7 @@
 			<figcaption>{photo.title}</figcaption>
 		</figure>
 	{:else}
-		<!-- this block renders when photos.length === 0 -->
+		<!-- Este bloco apresenta quando photos.length === 0 -->
 		<p>loading...</p>
 	{/each}
 </div>
