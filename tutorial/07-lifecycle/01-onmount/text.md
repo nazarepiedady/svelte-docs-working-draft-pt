@@ -2,11 +2,11 @@
 title: onMount
 ---
 
-Every component has a *lifecycle* that starts when it is created, and ends when it is destroyed. There are a handful of functions that allow you to run code at key moments during that lifecycle.
+Todo componente tem um *ciclo de vida* que começa quando é criado, e termina quando é destruído. Existem um punhado de funções que permitem-te executar o código em momentos chaves durante este ciclo de vida.
 
-The one you'll use most frequently is `onMount`, which runs after the component is first rendered to the DOM. We briefly encountered it [earlier](/tutorial/bind-this) when we needed to interact with a `<canvas>` element after it had been rendered.
+Aquela que usarás com mais frequência é `onMount`, a qual executa depois do componente ser apresentado primeiro no DOM. Nós deparámos-nos com ele sucintamente [anteriormente](/tutorial/bind-this) quando precisávamos de interagir com um elemento `<canvas>` depois de ter sido apresentado.
 
-We'll add an `onMount` handler that loads some data over the network:
+Adicionaremos um manipulador de `onMount` que carrega alguns dados sobre a rede:
 
 ```html
 <script>
@@ -21,8 +21,8 @@ We'll add an `onMount` handler that loads some data over the network:
 </script>
 ```
 
-> It's recommended to put the `fetch` in `onMount` rather than at the top level of the `<script>` because of server-side rendering (SSR). With the exception of `onDestroy`, lifecycle functions don't run during SSR, which means we can avoid fetching data that should be loaded lazily once the component has been mounted in the DOM.
+> É recomendado colocar a `fetch` na `onMount` ao invés do nível superior do `<script>` por causa da interpretação no lado do servidor (SSR). Com a exceção de `onDestroy`, as funções do ciclo de vida não executam durante a SSR, o que significa que podemos evitar a requisição de dados que deveriam ser carregados preguiçosamente assim que o componente tiver sido montado no DOM.
 
-Lifecycle functions must be called while the component is initialising so that the callback is bound to the component instance — not (say) in a `setTimeout`.
+As funções do ciclo de vida devem ser chamadas enquanto o componente estiver inicializando para que a função de resposta seja vinculada à instância do componente — não estamos a (dizer) dentro de um `setTimeout`.
 
-If the `onMount` callback returns a function, that function will be called when the component is destroyed.
+Se a função de reposta de `onMount` retornar uma função, esta função será chamada quando o componente for destruído.
