@@ -2,9 +2,9 @@
 title: onDestroy
 ---
 
-To run code when your component is destroyed, use `onDestroy`.
+Para executares código quando o teu componente for destruído, use `onDestroy`.
 
-For example, we can add a `setInterval` function when our component initialises, and clean it up when it's no longer relevant. Doing so prevents memory leaks.
+Por exemplo, podemos adicionar uma função `setInterval` quando o nosso componente inicializa, e limpá-la quando não for mais relevante. Fazer isto evita vazamentos de memória.
 
 ```html
 <script>
@@ -17,7 +17,7 @@ For example, we can add a `setInterval` function when our component initialises,
 </script>
 ```
 
-While it's important to call lifecycle functions during the component's initialisation, it doesn't matter *where* you call them from. So if we wanted, we could abstract the interval logic into a helper function in `utils.js`...
+Embora seja importante chamar funções de ciclo de vida durante a inicialização do componente, não importa de *onde* as chamas. Então se quiséssemos, poderíamos abstrair a lógica interna para uma função auxiliar no `utils.js`...:
 
 ```js
 import { onDestroy } from 'svelte';
@@ -31,7 +31,7 @@ export function onInterval(callback, milliseconds) {
 }
 ```
 
-...and import it into our component:
+...e importá-la para o nosso componente:
 
 ```html
 <script>
@@ -42,4 +42,4 @@ export function onInterval(callback, milliseconds) {
 </script>
 ```
 
-Open and close the timer a few times and make sure the counter keeps ticking and the CPU load increases. This is due to a memory leak as the previous timers are not deleted. Don't forget to refresh the page before solving the example.
+Abra e feche o temporizador algumas vezes e certifica-te de que o contador continua a fazer tiquetaque e a carga da CPU aumentar. Isto é devido à um vazamento de memória já que os temporizadores anteriores não foram eliminados. Não te esqueças de atualizar a página antes de solucionares o exemplo.
