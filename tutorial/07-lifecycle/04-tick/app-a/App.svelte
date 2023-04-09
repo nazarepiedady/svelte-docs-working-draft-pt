@@ -19,7 +19,8 @@
 			value.slice(selectionEnd)
 		);
 
-		// this has no effect, because the DOM hasn't updated yet
+		// isto não tem nenhum efeito,
+		// porque o DOM ainda não foi atualizado
 		this.selectionStart = selectionStart;
 		this.selectionEnd = selectionEnd;
 	}
