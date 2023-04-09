@@ -5,12 +5,12 @@
 	let div;
 
 	beforeUpdate(() => {
-		// determine whether we should auto-scroll
-		// once the DOM is updated...
+		// determina se deveríamos auto-deslocar
+		// assim que o DOM for atualizado...
 	});
 
 	afterUpdate(() => {
-		// ...the DOM is now in sync with the data
+		// ...o DOM agora está sincronia com os dados
 	});
 
 	const eliza = new Eliza();
