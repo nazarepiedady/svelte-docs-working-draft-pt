@@ -1,10 +1,10 @@
 ---
-title: Readable stores
+title: Memórias Legíveis
 ---
 
-Not all stores should be writable by whoever has a reference to them. For example, you might have a store representing the mouse position or the user's geolocation, and it doesn't make sense to be able to set those values from 'outside'. For those cases, we have *readable* stores.
+Nem todas as memórias deveriam ser graváveis por quem quer que tiver uma referência à elas. Por exemplo, podes ter uma memória representando a posição do rato ou localização geográfica do utilizador, e não faz sentido ser capaz de definir estes valores a partir do 'lado de fora'. Para estes casos, temos memórias *legíveis*.
 
-Click over to the `stores.js` tab. The first argument to `readable` is an initial value, which can be `null` or `undefined` if you don't have one yet. The second argument is a `start` function that takes a `set` callback and returns a `stop` function. The `start` function is called when the store gets its first subscriber; `stop` is called when the last subscriber unsubscribes.
+Clique sobre o separador `stores.js`. O primeiro argumento para `readable` é um valor inicial, que pode ser `null` ou `undefined` se ainda não tiveres um. O segundo argumento é uma função `start` que recebe uma função de resposta `set` e retorna uma função `stop`. A função `start` é chamada quando a memória recebe o seu primeiro subscritor; `stop` é chamada quando o último subscritor desfazer a subscrição:
 
 ```js
 export const time = readable(new Date(), function start(set) {
