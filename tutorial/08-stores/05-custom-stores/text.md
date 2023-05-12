@@ -1,10 +1,10 @@
 ---
-title: Custom stores
+title: Memórias Personalizadas
 ---
 
-As long as an object correctly implements the `subscribe` method, it's a store. Beyond that, anything goes. It's very easy, therefore, to create custom stores with domain-specific logic.
+Enquanto um objeto implementar corretamente o método `subscribe`, é uma memória. Além disto, qualquer coisa vai. É muito fácil, portanto, criar memórias personalizadas com a lógica específica de domínio.
 
-For example, the `count` store from our earlier example could include `increment`, `decrement` and `reset` methods and avoid exposing `set` and `update`:
+Por exemplo, a memória `count` de nosso exemplo anterior poderia incluir os métodos `increment`, `decrement` e `reset` e evitar expor `set` e `update`:
 
 ```js
 function createCount() {
