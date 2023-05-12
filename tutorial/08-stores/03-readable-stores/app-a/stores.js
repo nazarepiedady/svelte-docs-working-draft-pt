@@ -1,7 +1,7 @@
 import { readable } from 'svelte/store';
 
 export const time = readable(null, function start(set) {
-	// implementation goes here
+	// a implementação será escrita nesta função
 
 	return function stop() {};
 });
