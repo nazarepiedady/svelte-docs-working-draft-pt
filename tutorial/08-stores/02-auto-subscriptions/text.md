@@ -1,19 +1,19 @@
 ---
-title: Auto-subscriptions
+title: Auto-subscrições
 ---
 
-The app in the previous example works, but there's a subtle bug — the store is subscribed to, but never unsubscribed. If the component was instantiated and destroyed many times, this would result in a *memory leak*.
+A aplicação no exemplo anterior funciona, mas existe um subtil erro de programação — a memória é subscrita para, mas a subscrição nunca é desfeita. Se o componente fosse instanciado e destruído muitas vezes, isto resultaria num *vazamento de memória*.
 
-Start by declaring `unsubscribe` in `App.svelte`:
+Comece por declarar `unsubscribe` no `App.svelte`:
 
 ```js
 const unsubscribe = count.subscribe(value => {
 	countValue = value;
 });
 ```
-> Calling a `subscribe` method returns an `unsubscribe` function.
+> A chamada de um método `subscribe` retorna uma função `unsubscribe`.
 
-You now declared `unsubscribe`, but it still needs to be called, for example through the `onDestroy` [lifecycle hook](/tutorial/ondestroy):
+Tu agora declaraste `unsubscribe`, mas ele ainda precisa de ser chamada, por exemplo através do [gatilho de ciclo de vida](/tutorial/ondestroy) `onDestroy`:
 
 ```html
 <script>
@@ -35,7 +35,7 @@ You now declared `unsubscribe`, but it still needs to be called, for example thr
 <h1>The count is {countValue}</h1>
 ```
 
-It starts to get a bit boilerplatey though, especially if your component subscribes to multiple stores. Instead, Svelte has a trick up its sleeve — you can reference a store value by prefixing the store name with `$`:
+No entanto, isto começa a tornar-se um pouco complicado, especialmente se o teu componente subscreve a várias memórias. Ao invés disto, a Svelte tem um truque na sua manga — podes referenciar um valor da memória prefixando o nome da memória com `$`:
 
 ```html
 <script>
@@ -48,8 +48,8 @@ It starts to get a bit boilerplatey though, especially if your component subscri
 <h1>The count is {$count}</h1>
 ```
 
-> Auto-subscription only works with store variables that are declared (or imported) at the top-level scope of a component.
+> A auto-subscrição apenas funciona com as variáveis da memória que são declaradas (ou importadas) no âmbito de alto nível dum componente. 
 
-You're not limited to using `$count` inside the markup, either — you can use it anywhere in the `<script>` as well, such as in event handlers or reactive declarations.
+Não estás limitado a usar `$count` dentro da marcação — podes usá-lo em qualquer parte no `<script>` também, tal como em manipuladores de evento ou declarações reativas.
 
-> Any name beginning with `$` is assumed to refer to a store value. It's effectively a reserved character — Svelte will prevent you from declaring your own variables with a `$` prefix.
+> Qualquer nome começando com `$`  é suposto fazer referência à um valor da memória. É efetivamente um carácter reservado — a Svelte impedir-te-á de declarar as tuas próprias variáveis com um prefixo `$`.
