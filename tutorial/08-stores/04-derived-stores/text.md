@@ -1,8 +1,8 @@
 ---
-title: Derived stores
+title: Memórias Derivadas
 ---
 
-You can create a store whose value is based on the value of one or more *other* stores with `derived`. Building on our previous example, we can create a store that derives the time the page has been open:
+Tu podes criar uma memória cujo valor é baseado no valor de uma ou mais *outras* memórias com `derived`. Construindo o nosso exemplo anterior, podemos criar uma memória que deriva o momento que a página foi aberta:
 
 ```js
 export const elapsed = derived(
@@ -11,4 +11,4 @@ export const elapsed = derived(
 );
 ```
 
-> It's possible to derive a store from multiple inputs, and to explicitly `set` a value instead of returning it (which is useful for deriving values asynchronously). Consult the [API reference](/docs#run-time-svelte-store-derived) for more information.
+> É possível derivar uma memória a partir de várias entradas, e `set` (definir) explicitamente um valor no lugar de retorná-lo (o que é útil para derivar os valores de maneira assíncrona). Consulte a [referência da API](/docs#run-time-svelte-store-derived) por mais informação.
