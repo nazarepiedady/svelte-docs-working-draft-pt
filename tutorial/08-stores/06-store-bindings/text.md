@@ -1,18 +1,18 @@
 ---
-title: Store bindings
+title: Vínculos de Memória
 ---
 
-If a store is writable — i.e. it has a `set` method — you can bind to its value, just as you can bind to local component state.
+Se uma memória for gravável — por exemplo, tiver um método `set` — podes vincular o seu valor, exatamente como podes vincular ao estado do componente local.
 
-In this example we have a writable store `name` and a derived store `greeting`. Update the `<input>` element:
+Neste exemplo temos uma memória gravável `name` e uma memória derivada `greeting`. Atualize o elemento `<input>`:
 
 ```html
 <input bind:value={$name}>
 ```
 
-Changing the input value will now update `name` and all its dependents.
+Agora alterar o valor da entrada atualizará `name` e todas as suas dependências.
 
-We can also assign directly to store values inside a component. Add a `<button>` element:
+Nós podemos também atribuir diretamente aos valores da memória dentro dum componente. Adicione um elemento `<button>`:
 
 ```html
 <button on:click="{() => $name += '!'}">
@@ -20,4 +20,4 @@ We can also assign directly to store values inside a component. Add a `<button>`
 </button>
 ```
 
-The `$name += '!'` assignment is equivalent to `name.set($name + '!')`.
+A atribuição `$name += '!'` é equivalente à `name.set($name + '!')`.
