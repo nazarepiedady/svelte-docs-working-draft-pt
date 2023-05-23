@@ -693,7 +693,7 @@ Animates a `blur` filter alongside an element's opacity.
 * `duration` (`number`, default 400) — milliseconds the transition lasts
 * `easing` (`function`, default `cubicInOut`) — an [easing function](/docs#run-time-svelte-easing)
 * `opacity` (`number`, default 0) - the opacity value to animate out to and in from
-* `amount` (`number`, default 5) - the size of the blur in pixels
+* `amount` (`number | string`, default 5) - the size of the blur. Supports css units (for example: `"4rem"`). The default unit is `px`
 
 ```sv
 <script>
@@ -728,10 +728,11 @@ Animates the x and y positions and the opacity of an element. `in` transitions a
 * `delay` (`number`, default 0) — milliseconds before starting
 * `duration` (`number`, default 400) — milliseconds the transition lasts
 * `easing` (`function`, default `cubicOut`) — an [easing function](/docs#run-time-svelte-easing)
-* `x` (`number`, default 0) - the x offset to animate out to and in from
-* `y` (`number`, default 0) - the y offset to animate out to and in from
+* `x` (`number | string`, default 0) - the x offset to animate out to and in from
+* `y` (`number | string`, default 0) - the y offset to animate out to and in from
 * `opacity` (`number`, default 0) - the opacity value to animate out to and in from
 
+x and y use `px` by default but support css units, for example `x: '100vw'` or `y: '50%'`.
 You can see the `fly` transition in action in the [transition tutorial](/tutorial/adding-parameters-to-transitions).
 
 ```sv
@@ -768,6 +769,7 @@ Slides an element in and out.
 * `delay` (`number`, default 0) — milliseconds before starting
 * `duration` (`number`, default 400) — milliseconds the transition lasts
 * `easing` (`function`, default `cubicOut`) — an [easing function](/docs#run-time-svelte-easing)
+- `axis` (`x` | `y`, default `y`) — the axis of motion along which the transition occurs
 
 ```sv
 <script>
@@ -776,8 +778,8 @@ Slides an element in and out.
 </script>
 
 {#if condition}
-	<div transition:slide="{{delay: 250, duration: 300, easing: quintOut }}">
-		slides in and out
+	<div transition:slide="{{delay: 250, duration: 300, easing: quintOut, axis: 'x'}}">
+		slides in and out horizontally
 	</div>
 {/if}
 ```
