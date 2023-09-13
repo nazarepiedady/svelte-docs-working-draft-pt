@@ -1,10 +1,10 @@
 ---
-title: Tweened
+title: Intercalado
 ---
 
-Setting values and watching the DOM update automatically is cool. Know what's even cooler? *Tweening* those values. Svelte includes tools to help you build slick user interfaces that use animation to communicate changes.
+Definir valores e observar o DOM atualizar-se automaticamente é fantástico. Sabes o que é mais fantástico? *Intercalar* estes valores. A Svelte inclui ferramentas para ajudar-te a construir interfaces de utilizador astutas que usam animação para comunicar mudanças.
 
-Let's start by changing the `progress` store to a `tweened` value:
+Vamos começar por mudar a memória `progress` para um valor `tweened`:
 
 ```html
 <script>
@@ -14,7 +14,7 @@ Let's start by changing the `progress` store to a `tweened` value:
 </script>
 ```
 
-Clicking the buttons causes the progress bar to animate to its new value. It's a bit robotic and unsatisfying though. We need to add an easing function:
+Clicar nos botões faz a barra de progresso animar para o seu novo valor. No entanto, é um pouco robótico e insatisfatório. Nós precisamos de adicionar uma função atenuação:
 
 ```html
 <script>
@@ -28,13 +28,13 @@ Clicking the buttons causes the progress bar to animate to its new value. It's a
 </script>
 ```
 
-> The `svelte/easing` module contains the [Penner easing equations](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/), or you can supply your own `p => t` function where `p` and `t` are both values between 0 and 1.
+> O módulo `svelte/easing` contém as [equações de atenuação de Penner](https://web.archive.org/web/20190805215728/http://robertpenner.com/easing/), ou podes fornecer a tua própria função `p => t` onde `p` e `t` são ambos valores entre 0 e 1.
 
-The full set of options available to `tweened`:
+O conjunto completo de opções disponíveis para `tweened`:
 
-* `delay` — milliseconds before the tween starts
-* `duration` — either the duration of the tween in milliseconds, or a `(from, to) => milliseconds` function allowing you to (e.g.) specify longer tweens for larger changes in value
-* `easing` — a `p => t` function
-* `interpolate` — a custom `(from, to) => t => value` function for interpolating between arbitrary values. By default, Svelte will interpolate between numbers, dates, and identically-shaped arrays and objects (as long as they only contain numbers and dates or other valid arrays and objects). If you want to interpolate (for example) colour strings or transformation matrices, supply a custom interpolator
+* `delay` — milissegundos antes da interpolação começar
+* `duration` — a duração da interpolação em milissegundos, uma função `(from, to) => milliseconds` que permite-te (por exemplo) especificar interpolações mais longas para as mudanças maiores no valor
+* `easing` — uma função `p => t`
+* `interpolate` — uma função `(from, to) => t => value` personalizada para interpolar entre números, datas, vetores e objetos de forma idêntica (desde contenham apenas números e datas ou vetores e objetos válidos). Se quiseres interpolar (por exemplo) sequências de caracteres de cor ou transformações de matrizes, forneça um interpolador personalizado.
 
-You can also pass these options to `progress.set` and `progress.update` as a second argument, in which case they will override the defaults. The `set` and `update` methods both return a promise that resolves when the tween completes.
+Tu também podes passar estas opções à `progress.set` e `progress.update` como um segundo argumento, no caso em que sobreporão os padrões. Os métodos `set` e `update` ambos retornam uma promessa que resolve-se quando a interpolação terminar.
