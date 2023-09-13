@@ -1,10 +1,10 @@
 ---
-title: Spring
+title: Salto
 ---
 
-The `spring` function is an alternative to `tweened` that often works better for values that are frequently changing.
+A função `spring` é uma alternativa à `tweened` que muitas vezes funciona melhor para valores que estão mudando frequentemente.
 
-In this example we have two stores — one representing the circle's coordinates, and one representing its size. Let's convert them to springs:
+Neste exemplo, temos duas memórias — uma representando as coordenadas do círculo, e uma representando o seu tamanho. Vamos convertê-los aos saltos:
 
 ```html
 <script>
@@ -15,7 +15,7 @@ In this example we have two stores — one representing the circle's coordinates
 </script>
 ```
 
-Both springs have default `stiffness` and `damping` values, which control the spring's, well... springiness. We can specify our own initial values:
+Ambos saltos têm valores de `stiffness` e `damping` padrão, os quais controlam os saltos, bem... a capacidades de saltar. Nós podemos especificar os nossos valores iniciais:
 
 ```js
 let coords = spring({ x: 50, y: 50 }, {
@@ -24,6 +24,6 @@ let coords = spring({ x: 50, y: 50 }, {
 });
 ```
 
-Waggle your mouse around, and try dragging the sliders to get a feel for how they affect the spring's behaviour. Notice that you can adjust the values while the spring is still in motion.
+Agite o teu rato em torno, e tente arrastar os controlos deslizantes saberes como afetam o comportamento do salto. Repara que podes ajustar os valores enquanto o salto continuar em movimento.
 
-Consult the [API reference](/docs#run-time-svelte-motion-spring) for more information.
+Consulte a [referência da API](/docs#run-time-svelte-motion-spring) por mais informação.
