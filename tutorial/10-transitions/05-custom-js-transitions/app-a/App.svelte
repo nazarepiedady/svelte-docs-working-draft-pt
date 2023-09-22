@@ -2,7 +2,7 @@
 	let visible = false;
 
 	function typewriter(node, { speed = 50 }) {
-		// implementation goes here
+		// a implementação é escrita no corpo desta função
 
 		return {
 
