@@ -1,3 +1,3 @@
-# Rascunho da Tradução da Documentação da Svelte
+# Rascunho da Tradução da Iniciação da Svelte
 
-Neste repositório temporário encontrarás o resultado dos esforços do autor deste perfil para trazer para as comunidades portuguesas, o conteúdo oficial página oficial da Svelte em Português.
+Neste repositório temporário encontrarás o resultado dos esforços do autor deste perfil em trazer para as comunidades portuguesas, o conteúdo da página oficial da Svelte em Português.
