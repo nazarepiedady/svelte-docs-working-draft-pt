@@ -1,8 +1,8 @@
 ---
-title: Key blocks
+title: Blocos Chave
 ---
 
-Key blocks destroy and recreate their contents when the value of an expression changes.
+Os blocos chave destroem e recriam o seu conteúdo quando o valor duma expressão mudar:
 
 ```html
 {#key value}
@@ -10,7 +10,6 @@ Key blocks destroy and recreate their contents when the value of an expression c
 {/key}
 ```
 
-This is useful if you want an element to play its transition whenever a value changes instead of only when the element enters or leaves the DOM.
+Isto é útil se quisermos um elemento para tocar a sua transição sempre que um valor mudar ao invés de apenas quando o elemento entrar ou sair do DOM.
 
-Wrap the `<span>` element in a key block depending on `number`. This will make the
-animation play whenever you press the increment button.
+Envolvemos o elemento `<span>` num bloco chave dependendo do `number`. Isto fará a animação entrar em cena sempre que pressionarmos o botão de incrementar.
