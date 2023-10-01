@@ -1,12 +1,12 @@
 ---
-title: Local transitions
+title: Transições Locais
 ---
 
-Ordinarily, transitions will play on elements when any container block is added or destroyed. In the example here, toggling the visibility of the entire list also applies transitions to individual list elements.
+Normalmente, as transições atuarão sobre os elementos quando qualquer bloco contentor for adicionado ou destruído. Neste exemplo, a alternância da visibilidade da lista inteira também aplica transições aos elementos da lista individuais.
 
-Instead, we'd like transitions to play only when individual items are added and removed — in other words, when the user drags the slider.
+No lugar disto, gostaríamos de transições que apenas entram em cena quando os itens individuais forem adicionados ou removidos — em outras palavras, quando o utilizador arrastar o controlo deslizante.
 
-We can achieve this with a *local* transition, which only plays when the block with the transition itself is added or removed:
+Nós podemos alcançar isto com uma transição *local*, que entra em cena apenas quando o bloco com a própria transição for adicionado ou removido:
 
 ```html
 <div transition:slide|local>
