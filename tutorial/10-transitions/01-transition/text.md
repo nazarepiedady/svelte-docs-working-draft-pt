@@ -1,10 +1,10 @@
 ---
-title: The transition directive
+title: A Diretiva transition
 ---
 
-We can make more appealing user interfaces by gracefully transitioning elements into and out of the DOM. Svelte makes this very easy with the `transition` directive.
+Nós podemos tornar a interfaces de utilizador mais apelativas transitando elementos graciosamente para dentro e fora do DOM. A Svelte torna isto muito fácil com a diretiva `transition`.
 
-First, import the `fade` function from `svelte/transition`...
+Primeiro, importamos a função `fade` a partir do `svelte/transition`...
 
 ```html
 <script>
@@ -13,7 +13,7 @@ First, import the `fade` function from `svelte/transition`...
 </script>
 ```
 
-...then add it to the `<p>` element:
+...depois a adicionamos ao elemento `<p>`:
 
 ```html
 <p transition:fade>Fades in and out</p>
