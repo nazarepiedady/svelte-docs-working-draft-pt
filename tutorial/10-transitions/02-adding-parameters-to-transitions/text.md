@@ -1,8 +1,8 @@
 ---
-title: Adding parameters
+title: Adicionando Parâmetros
 ---
 
-Transition functions can accept parameters. Replace the `fade` transition with `fly`...
+As funções de transição pode aceitar os parâmetros. Substituímos a transição `fade` por `fly`...
 
 ```html
 <script>
@@ -11,7 +11,7 @@ Transition functions can accept parameters. Replace the `fade` transition with `
 </script>
 ```
 
-...and apply it to the `<p>` along with some options:
+...e a aplicamos ao `<p>` juntamente com algumas opções:
 
 ```html
 <p transition:fly="{{ y: 200, duration: 2000 }}">
@@ -19,4 +19,4 @@ Transition functions can accept parameters. Replace the `fade` transition with `
 </p>
 ```
 
-Note that the transition is *reversible* — if you toggle the checkbox while the transition is ongoing, it transitions from the current point, rather than the beginning or the end.
+Nota que a transição é *reversível* — se alternarmos a caixa de confirmação enquanto a transição está em curso, transita a partir do ponto atual, ao invés do começo ou fim.
