@@ -1,21 +1,21 @@
 ---
-title: The use directive
+title: A Diretiva Use
 ---
 
-Actions are essentially element-level lifecycle functions. They're useful for things like:
+As ações são essencialmente funções de ciclo de vida do nível do elemento. São úteis para coisas como:
 
-- interfacing with third-party libraries
-- lazy-loaded images
-- tooltips
-- adding custom event handlers
+- criar uma interface com bibliotecas de terceiros
+- imagens carregadas preguiçoso
+- dicas de ferramentas
+- adicionar manipuladores de evento personalizado
 
-In this app, we want to make the orange modal close when the user clicks outside it. It has an event handler for the `outclick` event, but it isn't a native DOM event. We have to dispatch it ourselves. First, import the `clickOutside` function...
+Nesta aplicação, queremos fazer o model laranja fechar quando o utilizador clicar fora dele. Ele tem um manipulador de evento para o evento `outclick`, mas este não é um evento de DOM nativo. Nós temos de despachá-lo nós mesmo. Primeiro, importamos a função `clickOutside`...
 
 ```js
 import { clickOutside } from "./click_outside.js";
 ```
 
-...then use it with the element:
+...depois a usamos com o elemento:
 
 ```html
 <div class="box" use:clickOutside on:outclick="{() => (showModal = false)}">
@@ -23,9 +23,9 @@ import { clickOutside } from "./click_outside.js";
 </div>
 ```
 
-Open the `click_outside.js` file. Like transition functions, an action function receives a `node` (which is the element that the action is applied to) and some optional parameters, and returns an action object. That object can have a `destroy` function, which is called when the element is unmounted.
+Abra o ficheiro `click_outside.js`. Tal como as funções de transição, uma função de ação recebe um `node` (que é o elemento para qual a ação é aplicada) e alguns parâmetros opcionais, e retorna um objeto de ação. O objeto pode ter uma função `destroy`, que é chamada quando o elemento é desmontado.
 
-We want to fire the `outclick` event when the user clicks outside the orange box. One possible implementation looks like this:
+Nós queremos disparar o evento `outclick` quando o utilizador clicar fora da caixa laranja. Uma possível implementação parece-se com isto:
 
 ```js
 export function clickOutside(node) {
@@ -45,4 +45,4 @@ export function clickOutside(node) {
 }
 ```
 
-Update the `clickOutside` function, click the button to show the modal and then click outside it to close it.
+Atualize a função `clickOutside`, clique botão para mostrar o modal e depois clica fora dele para fechá-lo.
