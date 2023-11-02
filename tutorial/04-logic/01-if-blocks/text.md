@@ -4,7 +4,7 @@ title: Blocos if
 
 A HTML não tem uma maneira de expressar *lógica*, como condicionais e laços de repetição. A Svelte tem.
 
-Para condicionalmente aprender alguma marcação, envolvemos ela em um bloco de `if`:
+Para interpretar condicionalmente alguma marcação, envolvemos ela em um bloco de `if`:
 
 ```html
 {#if user.loggedIn}
