@@ -1,8 +1,8 @@
 ---
-title: The class directive
+title: A Diretiva Class
 ---
 
-Like any other attribute, you can specify classes with a JavaScript attribute, seen here:
+Tal como qualquer outro atributo, podemos especificar classes com um atributo de JavaScript, visto neste exemplo:
 
 ```html
 <button
@@ -11,7 +11,7 @@ Like any other attribute, you can specify classes with a JavaScript attribute, s
 >foo</button>
 ```
 
-This is such a common pattern in UI development that Svelte includes a special directive to simplify it:
+Isto é um padrão muito com no desenvolvimento de interfaces que a Svelte inclui uma diretiva especial para simplificá-lo:
 
 ```html
 <button
@@ -20,4 +20,4 @@ This is such a common pattern in UI development that Svelte includes a special d
 >foo</button>
 ```
 
-The `selected` class is added to the element whenever the value of the expression is truthy, and removed when it's falsy.
+A classe `selected` é adicionada ao elemento sempre que o valor da expressão for verdadeiro, e removida quando for falso.
