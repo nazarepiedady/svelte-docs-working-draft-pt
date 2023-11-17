@@ -1,10 +1,10 @@
 ---
-title: The style directive
+title: A Diretiva Style
 ---
 
-Being able to set CSS properties dynamically is nice. However, this can get unwieldy if you have to write a long string. Mistakes like missing any of the semicolons could make the whole string invalid. Therefore, Svelte provides a nicer way to write inline styles with the style directive.
+Ser capaz de definir propriedades de CSS dinamicamente é fantástico. No entanto, isto pode tornar-se difícil de gerir se tivermos de escrever uma longa sequência de caracteres. Erros como deixar de fora qualquer um dos pontos e vírgula poderia tornar a sequência de caracteres inteira inválida. Portanto, a Svelte fornece uma maneira mais agradável de escrever estilos em linha com a diretiva `style`. 
 
-Change the style attribute of the paragraph to the following:
+Mudamos o atributo `style` do parágrafo para o seguinte:
 
 ```html
 <p 
@@ -13,6 +13,6 @@ Change the style attribute of the paragraph to the following:
 >
 ```
 
-The style directive shares a few qualities with the class directive. You can use a shorthand when the name of the property and the variable are the same. So `style:color="{color}"` can be written as just `style:color`.
+A diretiva `style` partilha algumas qualidades com a diretiva `class`. Nós podemos usar uma abreviação quando o nome da propriedade e da variável são o mesmo. Assim `style:color="{color}"` pode ser escrito apenas como `style:color`.
 
-Similar to the class directive, the style directive will take precedence if you try to set the same property through a style attribute.
+Semelhante à diretiva `class`, a diretiva `style` terão a prioridade se tentarmos definir a mesma propriedade através dum atributo `style`.
