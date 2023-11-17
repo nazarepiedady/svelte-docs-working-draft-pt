@@ -4,7 +4,7 @@ title: Selecionar Vários
 
 Um elemento de selecionar podem ter um atributo `multiple`, naqueles casos em que povoará um arranjo ao invés de selecionar um único valor.
 
-Retornando ao nosso [anterior exemplo de gelados](/tutorial/group-inputs), podemos substituir as caixas de verificação com um `<select multiple>`:
+Retornando ao nosso [anterior exemplo de gelados](/tutorial/group-inputs), podemos substituir as caixas de confirmação por um `<select multiple>`:
 
 ```html
 <h2>Flavours</h2>
