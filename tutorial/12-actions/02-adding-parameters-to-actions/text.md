@@ -1,12 +1,12 @@
 ---
-title: Adding parameters
+title: Adicionando Parâmetros
 ---
 
-Like transitions and animations, an action can take an argument, which the action function will be called with alongside the element it belongs to.
+Tal como as transições e animações, uma ação pode receber um argumento, com a qual a função da ação que será chamada ao lado do elemento em que esta pertence.
 
-Here, we're using a `longpress` action that fires an event with the same name whenever the user presses and holds the button for a given duration. Right now, if you switch over to the `longpress.js` file, you'll see it's hardcoded to 500ms.
+Neste contexto, usamos uma ação `longpress` que dispara um evento com o mesmo nome sempre que o utilizador pressionar e segurar o botão por uma dada duração. Neste exato momento, se mudarmos para o ficheiro `longpress.js`, veremos que está codificado manualmente para 500ms.
 
-We can change the action function to accept a `duration` as a second argument, and pass that `duration` to the `setTimeout` call:
+Nós podemos mudar a função da ação para aceitar uma `duration` como segundo argumento, e passar esta `duration` à chamada de `setTimeout`:
 
 ```js
 export function longpress(node, duration) {
@@ -24,15 +24,15 @@ export function longpress(node, duration) {
 }
 ```
 
-Back in `App.svelte`, we can pass the `duration` value to the action:
+De volta ao `App.svelte`, podemos passar o valor da `duration` à ação:
 
 ```html
 <button use:longpress={duration}
 ```
 
-This *almost* works — the event now only fires after 2 seconds. But if you slide the duration down, it will still take two seconds.
+Isto *quase* funciona — agora o evento apenas dispara depois de 2 segundos. Mas se deslizarmos a duração para baixo, ainda continuará a receber dois segundos.
 
-To change that, we can add an `update` method in `longpress.js`. This will be called whenever the argument changes:
+Para mudar isto, podemos adicionar um método `update` no `longpress.js`. Isto será chamado sempre que o argumento mudar:
 
 ```js
 return {
@@ -43,4 +43,4 @@ return {
 };
 ```
 
-> If you need to pass multiple arguments to an action, combine them into a single object, as in `use:longpress={{duration, spiciness}}`
+> Se precisarmos de passar vários argumentos à uma ação, as combinamos num único objeto, como em `use:longpress={{duration, spiciness}}`.
