@@ -1,8 +1,8 @@
 ---
-title: Shorthand class directive
+title: Abreviação da Diretiva Class
 ---
 
-Often, the name of the class will be the same as the name of the value it depends on:
+Frequentemente, o nome da classe será o mesmo que o nome do valor do qual depende:
 
 ```html
 <div class:big={big}>
@@ -10,7 +10,7 @@ Often, the name of the class will be the same as the name of the value it depend
 </div>
 ```
 
-In those cases we can use a shorthand form:
+Nestes casos, podemos usar uma forma abreviada:
 
 ```html
 <div class:big>
