@@ -1,10 +1,9 @@
 ---
-title: Inline styles
+title: Estilos Em Linha
 ---
 
-Apart from adding styles inside style tags, you can also add styles to individual elements using the style attribute. Usually you will want to do styling through CSS, but this can come in handy for dynamic styles, especially when combined with CSS custom properties.
+Para além de adicionar estilos dentro dos marcadores de estilo, também podemos adicionar estilos aos elementos individuais usando o atributo `style`. Normalmente desejaremos estilizar através da CSS, mas isto pode tornar-se útil para os estilos dinâmicos, especialmente quando combinada com as propriedades personalizadas de CSS.
 
-Add the following style attribute to the paragraph element:
-`style="color: {color}; --opacity: {bgOpacity};"`
+Adicionamos o seguinte atributo de estilo ao elemento de parágrafo: `style="color: {color}; --opacity: {bgOpacity};"`
 
-Great, now you can style the paragraph using variables that change based on your input without having to make a class for every possible value.
+Excelente, agora podemos estilizar o parágrafo usando variáveis que mudam baseados na nossa entrada sem ter que criar uma classe para todo valor possível.
