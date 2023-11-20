@@ -3,5 +3,5 @@
 </script>
 
 <Box>
-	<!-- put content here -->
+	<!-- colocar o conteúdo dentro deste componente -->
 </Box>
