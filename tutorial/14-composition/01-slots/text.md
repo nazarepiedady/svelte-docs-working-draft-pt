@@ -1,8 +1,8 @@
 ---
-title: Slots
+title: Ranhuras
 ---
 
-Just like elements can have children...
+Tal como os elementos podem ter filhos...:
 
 ```html
 <div>
@@ -10,7 +10,7 @@ Just like elements can have children...
 </div>
 ```
 
-...so can components. Before a component can accept children, though, it needs to know where to put them. We do this with the `<slot>` element. Put this inside `Box.svelte`:
+...os componentes também podem. No entanto, antes dum componente puder aceitar filhos, este precisa saber onde colocá-los. Nós fazemos isto com o elemento `<slot>`. Colocamos isto dentro do `Box.svelte`:
 
 ```html
 <div class="box">
@@ -18,7 +18,7 @@ Just like elements can have children...
 </div>
 ```
 
-You can now put things in the box:
+Nós agora podemos colocar coisas na caixa:
 
 ```html
 <Box>
