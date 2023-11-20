@@ -1,8 +1,8 @@
 ---
-title: Slot fallbacks
+title: Alternativas da Ranhura
 ---
 
-A component can specify *fallbacks* for any slots that are left empty, by putting content inside the `<slot>` element:
+Um componente pode especificar *alternativas* para quaisquer ranhuras que forem deixadas vazias, colocando o conteúdo dentro do elemento `<slot>`:
 
 ```html
 <div class="box">
@@ -12,7 +12,7 @@ A component can specify *fallbacks* for any slots that are left empty, by puttin
 </div>
 ```
 
-We can now create instances of `<Box>` without any children:
+Nós agora podemos criar instâncias do `<Box>` sem quaisquer filhos:
 
 ```html
 <Box>
