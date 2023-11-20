@@ -1,5 +1,5 @@
 <div class="box">
-	<!-- content should be injected here -->
+	<!-- o conteúdo deve ser injetado neste elemento -->
 </div>
 
 <style>
