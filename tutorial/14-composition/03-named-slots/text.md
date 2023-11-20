@@ -1,10 +1,10 @@
 ---
-title: Named slots
+title: Ranhuras Nomeadas
 ---
 
-The previous example contained a *default slot*, which renders the direct children of a component. Sometimes you will need more control over placement, such as with this `<ContactCard>`. In those cases, we can use *named slots*.
+O exemplo anterior continha uma *ranhura padrão*, que desenha os filhos diretos dum componente. Algumas vezes precisaremos de mais controlo sobre a colocação, tais como com este `<ContactCard>`. Nestes casos, podemos usar as *ranhuras nomeadas*.
 
-In `ContactCard.svelte`, add a `name` attribute to each slot:
+No `ContactCard.svelte`, adicionamos um atributo `name` para cada ranhura:
 
 ```html
 <article class="contact-card">
@@ -28,7 +28,7 @@ In `ContactCard.svelte`, add a `name` attribute to each slot:
 </article>
 ```
 
-Then, add elements with corresponding `slot="..."` attributes inside the `<ContactCard>` component:
+Depois, adicionamos os elementos com os atributos `slot="..."` correspondentes dentro do componente `<ContactCard>`:
 
 ```html
 <ContactCard>
