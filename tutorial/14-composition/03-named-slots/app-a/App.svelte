@@ -3,5 +3,5 @@
 </script>
 
 <ContactCard>
-	<!-- contact details go here -->
+	<!-- os detalhes do contato irão dentro deste componente -->
 </ContactCard>
