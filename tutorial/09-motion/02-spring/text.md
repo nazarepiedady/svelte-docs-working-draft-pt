@@ -4,7 +4,7 @@ title: Salto
 
 A função `spring` é uma alternativa à `tweened` que muitas vezes funciona melhor para valores que estão mudando frequentemente.
 
-Neste exemplo, temos duas memórias — uma representando as coordenadas do círculo, e uma representando o seu tamanho. Vamos convertê-los aos saltos:
+Neste exemplo, temos duas memórias — uma representando as coordenadas do círculo, e uma representando o seu tamanho. Vamos convertê-los em saltos:
 
 ```html
 <script>
