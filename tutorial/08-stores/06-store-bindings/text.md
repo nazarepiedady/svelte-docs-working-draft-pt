@@ -2,7 +2,7 @@
 title: Vínculos de Memória
 ---
 
-Se uma memória for gravável — por exemplo, tiver um método `set` — podes vincular o seu valor, exatamente como podes vincular ao estado do componente local.
+Se uma memória for gravável — isto é, tiver um método `set` — podemos vincular ao seu valor, exatamente como podemos vincular ao estado do componente local.
 
 Neste exemplo temos uma memória gravável `name` e uma memória derivada `greeting`. Atualize o elemento `<input>`:
 
@@ -10,7 +10,7 @@ Neste exemplo temos uma memória gravável `name` e uma memória derivada `greet
 <input bind:value={$name}>
 ```
 
-Agora alterar o valor da entrada atualizará `name` e todas as suas dependências.
+Agora alterar o valor da entrada atualizará `name` e todos os seus dependentes.
 
 Nós podemos também atribuir diretamente aos valores da memória dentro dum componente. Adicione um elemento `<button>`:
 
